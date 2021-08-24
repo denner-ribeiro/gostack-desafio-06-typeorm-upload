@@ -28,9 +28,29 @@
     "prettier/prettier": "error",
     "class-methods-use-this": "off",
     "@typescript-eslint/camelcase": "off",
-    "@typescript-eslint/no-unused-vars": ["error", {
-      "argsIgnorePattern": "_"
-    }],
+    "no-use-before-define": "off",
+    "no-restricted-syntax": [
+      "error",
+      // "FunctionExpression",
+      "WithStatement",
+      "BinaryExpression[operator='in']"
+    ],
+    "@typescript-eslint/no-use-before-define": [
+      "error"
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "_"
+      }
+    ],
+    // para tirar o erro ao deletar um atributo de um objeto
+    "no-param-reassign": [
+      2,
+      {
+        "props": false
+      }
+    ],
     "import/extensions": [
       "error",
       "ignorePackages",
